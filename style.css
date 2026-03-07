@@ -1,0 +1,175 @@
+/* BODY + STAR SKY */
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:white;
+  text-align:center;
+  overflow:hidden;
+  background: linear-gradient(180deg,#1a0033,#330066,#660033);
+  height:100vh;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:
+    radial-gradient(2px 2px at 20% 30%, white, transparent),
+    radial-gradient(2px 2px at 80% 40%, white, transparent),
+    radial-gradient(2px 2px at 50% 70%, white, transparent),
+    radial-gradient(2px 2px at 30% 80%, white, transparent),
+    radial-gradient(2px 2px at 70% 20%, white, transparent);
+  animation:twinkle 5s infinite alternate;
+  z-index:-1;
+}
+
+@keyframes twinkle{
+  0%{opacity:.4}
+  100%{opacity:.9}
+}
+
+/* SCREENS */
+.screen{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  transform:scale(.9);
+  transition:all .7s;
+  pointer-events:none;
+  padding:5px;
+  box-sizing:border-box;
+}
+
+.screen.active{
+  opacity:1;
+  transform:scale(1);
+  pointer-events:auto;
+}
+
+/* BUTTONS */
+button{
+  padding:10px;
+  font-size:4vw;
+  border:none;
+  border-radius:10px;
+  margin:5px;
+  background:#ff4da6;
+  color:white;
+  cursor:pointer;
+  min-width:25vw;
+  max-width:80vw;
+}
+
+button:hover{
+  background:#ff1a8c;
+}
+
+/* MAZE */
+#mazeCanvas{
+  background:#fff;
+  border:6px solid pink;
+  border-radius:10px;
+  margin-top:10px;
+  width:90vw;
+  max-width:400px;
+  height:auto;
+  aspect-ratio:1/1;
+}
+
+/* Controls */
+.controls button{
+  font-size:5vw;
+  padding:2vw;
+  margin:1vw;
+}
+
+/* HUG ANIMATION */
+.hug{
+  font-size:12vw;
+  display:flex;
+  align-items:center;
+  gap:3vw;
+  animation:hugMove 2s forwards;
+}
+
+.heart{
+  animation:heartBeat 1s infinite;
+}
+
+@keyframes hugMove{
+  0%{transform:scale(.5);opacity:0;}
+  100%{transform:scale(1.2);opacity:1;}
+}
+
+@keyframes heartBeat{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.3)}
+  100%{transform:scale(1)}
+}
+
+/* LOVE MESSAGE BOX */
+#messageScreen{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  width:100%;
+  height:100%;
+  background:linear-gradient(180deg,#330066,#660033);
+  color:#fff;
+  padding:5px;
+  box-sizing:border-box;
+}
+
+#loveMessage{
+  background: rgba(255, 77, 166, 0.25);
+  border-radius: 20px;
+  padding:5vw;
+  width:90%;
+  max-width:600px;
+  font-size:4vw;
+  line-height:1.6;
+  box-shadow: 0 8px 20px rgba(255,77,166,0.5);
+  backdrop-filter: blur(5px);
+  text-align:left;
+  overflow:hidden;
+  animation:fadeIn 1s ease forwards;
+}
+
+/* FLOATING HEARTS */
+.heartFloat{
+  position:absolute;
+  font-size:5vw;
+  animation:float 6s linear infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(0)}
+  100%{transform:translateY(-100vh)}
+}
+
+/* MAZE WALL GLOW */
+.wall{
+  background:#ff66b2;
+  box-shadow:0 0 10px #ff66b2;
+}
+
+/* RESPONSIVE TEXT */
+h1,h2,p{
+  margin:3px;
+}
+
+/* MEDIA QUERIES FOR EXTRA TINY SCREENS */
+@media (max-width:360px){
+  button{font-size:12px; min-width:35vw; padding:6px;}
+  .hug{font-size:50px; gap:10px;}
+  #loveMessage{font-size:12px; padding:12px;}
+}
