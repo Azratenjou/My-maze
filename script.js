@@ -140,9 +140,9 @@ const message=`
 
 Yipppieee you reached the end of this little maze baby, and just like that, life has many paths, twists, and turns—but no matter what, we will always find our way back to each other hehe. Every time I think of your smile, my heart feels lighter; every time I hear your voice, my worries disappear. You are my sunshine on cloudy days, my calm in the storm, and my joy in every little moment.
 
-Even if we are far apart, kahit na malayo ka and nakakapagtampo yun ahh kasi hindi kita mayakap yakap and ma kiss☹️☹️ pero okay lang, when the time comes I will give you lots of kisses and hugs my darling and, I hope you always remember that you have a special place in my heart that no one else can touch. I made this game to make you smile, to show you that I’ll always be there, cheering for you, laughing with you, dreaming of our moments together, and makabawi kahit papaano kasi lagi na lang kitang natutulugan hehe.
+Even if we are far apart, kahit na malayo ka and nakakapagtampo yun ahh kasi hindi kita mayakap yakap and ma kiss☹️☹️ pero okay lang, when the time comes I will give you lots of kisses and hugs my baby and, I hope you always remember that you have a special place in my heart that no one else can touch. I made this game to make you smile, to show you that I’ll always be there, cheering for you, laughing with you, dreaming of our moments together.
 
-You are my darling, my muse, my baby, my forever, and my everything. Thank you for being you, and for letting me love you. I love you more than words could ever fully express, and I will always cherish every moment we share my darling. 🥹🥹🥹`;
+You are my baby, my forever, and my everything. Thank you for being you, and for letting me love you. I love you more than words could ever fully express, and I will always cherish every moment we share my zea. 🥹🥹🥹`;
 
 function showMessage(){
     messageScreen.classList.add("active");
